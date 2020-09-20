@@ -1,5 +1,7 @@
 // console.log("Hello World")
 
+//  VARIABLES
+
 // var age = 26;
 // age = 27
 // age = age + 1
@@ -13,4 +15,13 @@
 
 // const pi = 3.14159
 // let numberOfLimbs = 4
+
+// STRING VARIABLES
+
+// var name = "Doug";
+// var zenva = "Zenva";
+
+// let concat = name + zenva
+
+// let finalStr = `Hi! My name is ${name} and I'm taking a course on ${zenva}`
 
