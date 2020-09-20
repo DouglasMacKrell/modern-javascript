@@ -25,3 +25,6 @@
 
 // let finalStr = `Hi! My name is ${name} and I'm taking a course on ${zenva}`
 
+require('dotenv').config()
+
+console.log(process.env.API_KEY)
