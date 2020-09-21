@@ -86,15 +86,28 @@ let url =
 async function fetchData(url) {
     let response = await fetch(url);
     let jsonResponse = await response.json();
-    console.log(JSON.stringify(jsonResponse));
+    printData(jsonResponse);
+}
+
+function printData(jsonData) {
+    let jsonObject = jsonData['achievementpercentages']
+    let allAchievements = jsonObject['achievements']
+
+    for (let achievement of allAchievements) {
+        let name = achievement['name']
+        console.log(name)
+    }
 }
 
 fetchData(url).catch(() => { console.log("Oops, all errors!") })
 
 // INTRO TO FOR LOOPS
 
-var numbs = [1, 2, 3[;
+// var numbs = [1, 2, 3[;
 
-for (let num of numbs) {
-    console.log(num)
-}
+// for (let num of numbs) {
+//     console.log(num)
+// }
+
+// READING DATA WITH FOR LOOPS
+
