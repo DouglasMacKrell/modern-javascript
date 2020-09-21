@@ -53,3 +53,26 @@
 // const result = (num1, num2) => {
 //     return num1 + num2
 // }
+
+// INTRO TO PROMISES
+
+// const promise = new Promise((resolve, reject) => {
+//     let number1 = 5
+//     if (number1 === 5) {
+//         resolve("Success!")
+//     } else {
+//         reject("Failure!")
+//     }
+// });
+
+// promise.then((message) => {
+//     console.log(message);
+// }).catch((message) => {
+//     console.log(message);
+// })
+
+// async function sum(num1, num2 = 2) {
+
+//   return await num1 + num2; // fetch data here
+// }
+
