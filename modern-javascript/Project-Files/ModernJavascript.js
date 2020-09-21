@@ -41,3 +41,15 @@
 //     emerald: 4,
 //     diamond: 5
 // }
+
+// INTRO TO FUNCTIONS
+
+// function sum(num1, num2 = 2) {
+//     return num1 + num2
+// }
+
+// console.log(sum(5))
+
+// const result = (num1, num2) => {
+//     return num1 + num2
+// }
