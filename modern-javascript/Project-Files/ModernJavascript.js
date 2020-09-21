@@ -25,6 +25,19 @@
 
 // let finalStr = `Hi! My name is ${name} and I'm taking a course on ${zenva}`
 
-require('dotenv').config()
+// API
 
-console.log(process.env.API_KEY)
+// require('dotenv').config()
+
+// console.log(process.env.API_KEY)
+
+// ARRAYS AND OBJECTS
+
+// var numbers = [1, 2, 3];
+// numbers[0]
+
+// var gems = {
+//     ruby: 2,
+//     emerald: 4,
+//     diamond: 5
+// }
