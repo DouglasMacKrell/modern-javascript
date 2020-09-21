@@ -90,3 +90,11 @@ async function fetchData(url) {
 }
 
 fetchData(url).catch(() => { console.log("Oops, all errors!") })
+
+// INTRO TO FOR LOOPS
+
+var numbs = [1, 2, 3[;
+
+for (let num of numbs) {
+    console.log(num)
+}
