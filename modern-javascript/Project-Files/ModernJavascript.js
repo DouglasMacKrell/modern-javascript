@@ -78,39 +78,49 @@
 
 // FETCHING DATA FROM AN URL
 
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
 let url =
   "http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=221380";
 
 class Achievement {
-    constructor(name, percent) {
-        this.name = name;
-        this.percent = percent;
-    }
+  constructor(name, percent) {
+    this.name = name;
+    this.percent = percent;
+  }
 
-    printValues() {
-        console.log(`${this.name} achievement has been completed by ${this.percent}% of people.`)
-    } 
+  printValues() {
+    console.log(
+      `${this.name} achievement has been completed by ${this.percent}% of people.`
+    );
+  }
 }
 
 async function fetchData(url) {
-    let response = await fetch(url);
-    let jsonResponse = await response.json();
-    printData(jsonResponse);
+  let response = await fetch(url);
+  let jsonResponse = await response.json();
+  printData(jsonResponse);
 }
 
 function printData(jsonData) {
-    let jsonObject = jsonData['achievementpercentages']
-    let allAchievements = jsonObject['achievements']
+  var achievementsArray = [];
+  let jsonObject = jsonData["achievementpercentages"];
+  let allAchievements = jsonObject["achievements"];
 
-    for (let achievement of allAchievements) {
-        let name = achievement['name']
-        console.log(name)
-    }
+  for (let achievement of allAchievements) {
+    let name = achievement["name"];
+    let percent = achievement["percent"];
+    let newAchievement = new Achievement(name, percent);
+    newAchievement.printValues();
+    achievementsArray.push(newAchievement);
+  }
+  console.log(achievementsArray.length);
+  return achievementsArray;
 }
 
-fetchData(url).catch(() => { console.log("Oops, all errors!") })
+fetchData(url).catch(function () {
+  console.log("Oops, all errors!");
+});
 
 // INTRO TO FOR LOOPS
 
@@ -124,4 +134,4 @@ fetchData(url).catch(() => { console.log("Oops, all errors!") })
 
 // CREATING DATA CLASS
 
-
+// STORING DATA IN OBJECTS
