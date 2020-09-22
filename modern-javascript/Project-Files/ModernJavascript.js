@@ -90,9 +90,16 @@ class Achievement {
   }
 
   printValues() {
-    console.log(
-      `${this.name} achievement has been completed by ${this.percent}% of people.`
-    );
+      if (this.percent === 0) {
+        console.log(
+            `No one has completed the achievement ${this.name}.`
+        );
+      } else {
+        console.log(
+           `${this.name} achievement has been completed by ${this.percent}% of people.`
+        );
+      }
+
   }
 }
 
@@ -135,3 +142,6 @@ fetchData(url).catch(function () {
 // CREATING DATA CLASS
 
 // STORING DATA IN OBJECTS
+
+// CONDITIONALS
+
